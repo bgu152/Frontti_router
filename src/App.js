@@ -15,19 +15,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          Welcome to React Router
+          Welcome to the React Router
       </header>
 
       <BrowserRouter>
           <Link to="/">Home</Link> {' '}
           <Link to="/about">About</Link> {' '}
           <Link to="/contact">Contact</Link> {' '}
-          <Link to="/links">Links</Link> {' '}
           <Routes>
-            <Route exact path ="/" component ={<Home/>}/>
-            <Route  path ="/about" component ={<About/>}/>
-            <Route  path ="/contact" component ={<Contact/>}/>
-            <Route  path ="/links" render ={()=> <h1>Page not found</h1>}/>
+            <Route exact path ="/" element ={<Home/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route  path ="/contact" element ={<Contact/>}/>
           </Routes>
       </BrowserRouter>
     </div>
